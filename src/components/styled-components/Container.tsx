@@ -5,7 +5,8 @@ export const Container = Styled.div`
     height: 100%;
     display: flex;
     flex-direction: column;
-    background: ${prop => prop.theme.bg}
+    background: ${prop => prop.theme.bg};
+    transition: all .5s ease-out;
 `
 
 export const StyledMain = Styled.main`

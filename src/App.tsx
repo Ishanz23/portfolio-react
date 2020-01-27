@@ -4,14 +4,12 @@ import { Layout } from './components/layout/Layout'
 
 const App: React.FC = () => {
   const [state, setstate] = useState<ThemeContextType>({
-    themeType: 'dark',
-    toggleTheme: () => {}
+    themeType: 'dark'
   })
   const toggleTheme = () => {
     console.log('toggleTheme Called')
     setstate({
-      themeType: state.themeType === 'dark' ? 'light' : 'dark',
-      toggleTheme
+      themeType: state.themeType === 'dark' ? 'light' : 'dark'
     })
   }
   return (

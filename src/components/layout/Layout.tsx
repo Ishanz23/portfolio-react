@@ -13,14 +13,14 @@ export const Layout = () => {
       mainFont: '#212121',
       primary: '#1a237e',
       primaryFont: '#e8eaf6',
-      accent: '#d81b60'
+      accent: '#ff1744'
     },
     dark: {
       bg: '#212121',
       mainFont: '#e8eaf6',
       primary: '#673ab7',
       primaryFont: '#e8eaf6',
-      accent: '#e64a19'
+      accent: '#1de9b6'
     }
   }
   return (
