@@ -22,7 +22,7 @@ export const StyledList = styled.ul<{ open: boolean }>`
   position: fixed;
   top: 8vh;
   right: 0;
-  width: 60%;
+  width: 100%;
   height: 92vh;
   background: ${props => darken(0.2, props.theme.primary)};
   display: flex;
@@ -40,5 +40,9 @@ export const StyledList = styled.ul<{ open: boolean }>`
     display: flex;
     align-items: center;
     text-transform: uppercase;
+  }
+
+  @media (min-width: 480px) {
+    width: 50%;
   }
 `

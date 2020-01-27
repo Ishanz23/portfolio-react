@@ -2,7 +2,7 @@ import React from 'react'
 import { ThemeContext } from '../../contexts/ThemeContext'
 import { ThemeProvider } from 'styled-components'
 import { Container, StyledMain } from '../styled-components/Container'
-import { Home } from '../Home'
+import { Home, StyledHome } from '../Home'
 import { Navbar } from './Navbar'
 import { Theme } from '../../models/Theme'
 
@@ -13,14 +13,16 @@ export const Layout = () => {
       mainFont: '#212121',
       primary: '#1a237e',
       primaryFont: '#e8eaf6',
-      accent: '#ff1744'
+      accent: '#ff1744',
+      accentFont: '#e8eaf6'
     },
     dark: {
       bg: '#212121',
       mainFont: '#e8eaf6',
-      primary: '#673ab7',
+      primary: '#7b1fa2',
       primaryFont: '#e8eaf6',
-      accent: '#1de9b6'
+      accent: '#1de9b6',
+      accentFont: '#212121'
     }
   }
   return (
@@ -31,7 +33,7 @@ export const Layout = () => {
             <Container>
               <Navbar theme={{ themeType, toggleTheme }} />
               <StyledMain color={theme[themeType].mainFont}>
-                <Home></Home>
+                <StyledHome></StyledHome>
               </StyledMain>
             </Container>
           </ThemeProvider>

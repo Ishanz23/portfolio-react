@@ -8,7 +8,7 @@ export const ThemeButton = styled.button`
   margin: 0rem 1rem;
   cursor: pointer;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 50%;
   outline: none;
   box-shadow: 2px 2px 2px ${props => darken(0.5, props.theme.accent)};
   transition: all 0.5s ease-out;

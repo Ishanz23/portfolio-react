@@ -12,19 +12,41 @@ export const Hamburger = (props: any) => {
   )
 }
 
-export const StyledHamburger = styled(Hamburger)`
+export const StyledHamburger = styled(Hamburger)<{ open: boolean }>`
   display: flex;
   flex-direction: column;
-  width: 2rem;
-  height: auto;
-  margin: 0rem 1rem;
+  width: 1.8rem;
+  height: 1.8rem;
   cursor: pointer;
+  position: relative;
   div {
+    position: absolute;
     background: ${props => props.theme.primaryFont};
     width: 100%;
-    height: 0.25rem;
+    height: 3px;
     border-radius: 0.25rem;
-    margin: 0.2rem 0rem;
-    box-shadow: 2px 2px 2px ${props => darken(0.5, props.theme.accent)};
+    margin: 2px 0rem;
+    box-shadow: ${props => (props.open ? 'none' : `2px 2px 2px ${darken(0.45, props.theme.accent)}`)};
+    transition: all 0.5s ease;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+  }
+
+  div:nth-child(1) {
+    top: 0;
+    transform: ${props => (props.open ? 'rotate(45deg) scale(1.05)' : 'rotate(0deg) scale(1)')};
+  }
+
+  div:nth-child(2) {
+    top: 0.75rem;
+    transform: ${props => (props.open ? 'scale(0)' : 'scale(1)')};
+    opacity: ${props => (props.open ? '0' : '1')};
+  }
+
+  div:nth-child(3) {
+    top: 1.5rem;
+    transform: ${props => (props.open ? 'rotate(-45deg) scale(1.05)' : 'rotate(0deg) scale(1)')};
   }
 `

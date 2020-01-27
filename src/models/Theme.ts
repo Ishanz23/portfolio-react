@@ -9,6 +9,7 @@ export interface ThemeProperties {
   primary: string
   primaryFont: string
   accent: string
+  accentFont: string
 }
 
 export type ThemeType = 'light' | 'dark'
